@@ -100,6 +100,7 @@ public class CrawlerThird extends javax.swing.JFrame {
             }
         ));
         jTable1.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
+        jTable1.setEnabled(false);
         jTable1.setPreferredSize(new java.awt.Dimension(800, 600));
         jScrollPane1.setViewportView(jTable1);
 
