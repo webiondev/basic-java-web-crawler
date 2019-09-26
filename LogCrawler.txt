@@ -1,20 +1,2 @@
-Sep 26, 2019 7:21:02 AM crawler.Database connect
-INFO: Connected to sqlite
-Sep 26, 2019 7:21:02 AM crawler.Database readTable
-WARNING: No such table exists. Please crawl the site first
-Sep 26, 2019 7:21:21 AM crawler.Crawler getInformarion
-WARNING: Invalid URL entered
-Sep 26, 2019 7:21:32 AM crawler.Crawler getInformarion
-INFO: URL validation passed
-Sep 26, 2019 7:21:32 AM crawler.Crawler getInformarion
-INFO: Acquired info from http://magento-test.finology.com.my/gabrielle-micro-sleeve-top.html recorded in memory
-Sep 26, 2019 7:21:32 AM crawler.Database connect
-INFO: Connected to sqlite
-Sep 26, 2019 7:21:32 AM crawler.Database createTable
-INFO: Database table created
-Sep 26, 2019 7:21:34 AM crawler.Database insert
-INFO: Inserted to database
-Sep 26, 2019 7:21:34 AM crawler.Database close
-INFO: Connection closed
-Sep 26, 2019 7:21:39 AM crawler.Database connect
+Sep 26, 2019 8:23:50 AM crawler.Database connect
 INFO: Connected to sqlite

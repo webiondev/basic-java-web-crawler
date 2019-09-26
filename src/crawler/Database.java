@@ -32,7 +32,9 @@ public class Database {
         try {
             // db parameters
 
-            String url = "jdbc:sqlite:D:/NetBeansProjects/Crawler/products.db";
+             String url = "jdbc:sqlite:D:/NetBeansProjects/Crawler/products.db";
+            //String url = "jdbc:sqlite:D:/products.db";
+            
             // create a connection to the database
             Class.forName("org.sqlite.JDBC");
             conn = DriverManager.getConnection(url);

@@ -8,6 +8,7 @@ import java.util.List;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
+
 /**
  * Represents CrawlerFirst class for second GUI output.
  *
@@ -22,7 +23,7 @@ public class CrawlerThird extends javax.swing.JFrame {
      * Creates new form CrawlerThird
      */
     public CrawlerThird() {
-
+        
         initComponents();
         this.setLayout(new GridBagLayout());
         DefaultTableModel model = new DefaultTableModel();
@@ -36,6 +37,7 @@ public class CrawlerThird extends javax.swing.JFrame {
         model.addColumn("PATTERN");
         model.addColumn("CLIMATE");
         model.addColumn("URL");
+       
         List<String> productInfo = new ArrayList<>();
         productInfo = Database.readTable();
 
@@ -57,8 +59,9 @@ public class CrawlerThird extends javax.swing.JFrame {
 
         }
 
-        jTable2.setFont(new Font("Serif", Font.BOLD, 20));
-        jTable2.setModel(model);
+        jTable1.setFont(new Font("Serif", Font.BOLD, 20));
+        jTable1.setModel(model);
+        
     }
 
     /**
@@ -70,20 +73,22 @@ public class CrawlerThird extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        jPanel1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Crawler Database");
         setIconImage(new javax.swing.ImageIcon(getClass().getResource("/images/36-128.png")).getImage());
+        setLocationByPlatform(true);
+        setMaximizedBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setMaximumSize(new java.awt.Dimension(1000, 1000));
+        setMinimumSize(new java.awt.Dimension(500, 500));
         setPreferredSize(new java.awt.Dimension(1200, 1200));
         setResizable(false);
 
-        jScrollPane2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jScrollPane2.setName("Products Table"); // NOI18N
-        jScrollPane2.setPreferredSize(new java.awt.Dimension(1000, 1000));
-
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        jTable1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -94,23 +99,41 @@ public class CrawlerThird extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jTable1.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
+        jTable1.setPreferredSize(new java.awt.Dimension(800, 600));
+        jScrollPane1.setViewportView(jTable1);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 22, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(44, 44, 44)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(34, 34, 34)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(258, Short.MAX_VALUE))
         );
 
         pack();
@@ -152,7 +175,8 @@ public class CrawlerThird extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
