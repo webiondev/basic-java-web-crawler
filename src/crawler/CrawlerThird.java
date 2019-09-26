@@ -1,13 +1,15 @@
-
 package crawler;
+
 
 import java.awt.Font;
 import java.awt.GridBagLayout;
+
+
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
 
+
+import javax.swing.table.DefaultTableModel;
 
 /**
  * Represents CrawlerFirst class for second GUI output.
@@ -23,11 +25,11 @@ public class CrawlerThird extends javax.swing.JFrame {
      * Creates new form CrawlerThird
      */
     public CrawlerThird() {
-        
+
         initComponents();
         this.setLayout(new GridBagLayout());
         DefaultTableModel model = new DefaultTableModel();
-       
+
         //prepare table
         model.addColumn("NAME");
         model.addColumn("DESCRIPTION");
@@ -37,7 +39,7 @@ public class CrawlerThird extends javax.swing.JFrame {
         model.addColumn("PATTERN");
         model.addColumn("CLIMATE");
         model.addColumn("URL");
-       
+
         List<String> productInfo = new ArrayList<>();
         productInfo = Database.readTable();
 
@@ -46,10 +48,9 @@ public class CrawlerThird extends javax.swing.JFrame {
         //add data from database to table
         for (String data : productInfo) {
 
-            
             o[index] = data;
             index++;
-            
+
             //read new data when end of one row reached
             if (data.matches("^(http?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]")) {
                 model.addRow(o);
@@ -58,10 +59,14 @@ public class CrawlerThird extends javax.swing.JFrame {
             }
 
         }
+        
+        jTable1.setPreferredScrollableViewportSize(jTable1.getPreferredSize());
+        jTable1.setFillsViewportHeight(true);
 
         jTable1.setFont(new Font("Serif", Font.BOLD, 20));
+
         jTable1.setModel(model);
-        
+
     }
 
     /**
@@ -87,6 +92,9 @@ public class CrawlerThird extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(1200, 1200));
         setResizable(false);
 
+        jPanel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jPanel1.setPreferredSize(new java.awt.Dimension(1000, 1000));
+
         jTable1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -111,13 +119,13 @@ public class CrawlerThird extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(503, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 22, Short.MAX_VALUE))
+                .addGap(0, 573, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -127,14 +135,14 @@ public class CrawlerThird extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(44, 44, 44)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(258, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
